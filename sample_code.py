@@ -17,7 +17,7 @@ def divide(a, b):
 
 
 if __name__ == "__main__":
-    print("Addition of 2 and 3 is:", add(2, 3))
-    print("Subtraction of 5 from 10 is:", subtract(10, 5))
-    print("Multiplication of 4 and 5 is:", multiply(4, 5))
-    print("Division of 10 by 2 is:", divide(10, 2))
+    print("Addition of 6 and 7 is:", add(6, 7))
+    print("Subtraction of 2 from 9 is:", subtract(9, 2))
+    print("Multiplication of 9 and 3 is:", multiply(9, 3))
+    print("Division of 90 by 15 is:", divide(90, 15))
