@@ -10,15 +10,15 @@ pipeline {
 
         stage('Show Project Files') {
             steps {
-                powershell '''
-                    Get-ChildItem -Recurse
+                sh '''
+                    find . -maxdepth 3 -type f
                 '''
             }
         }
 
         stage('Run Python Program') {
             steps {
-                powershell '''
+                sh '''
                     python3 sample_code.py
                 '''
             }
@@ -26,7 +26,7 @@ pipeline {
 
         stage('Run Unit Tests') {
             steps {
-                powershell '''
+                sh '''
                     python3 -m pytest -v tests
                 '''
             }
@@ -34,7 +34,7 @@ pipeline {
 
         stage('Check Code Style') {
             steps {
-                powershell '''
+                sh '''
                     pycodestyle sample_code.py --max-line-length=100
                 '''
             }
